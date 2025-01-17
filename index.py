@@ -25,9 +25,9 @@ while True:
     print("2. See contact")                    
     print("3. See all contacts")               
     print("4. Update contact")                 
-    print("5. Complete contact")               
-    print("6. See favorite contacts")         
-    print("7. See non-favorite contacts")        
+    print("5. Favorite contact")               
+    print("6. See all favorite contacts")         
+    print("7. See all non-favorite contacts")        
     print("8. Delete contact")                 
     print("9. Exit")
 
