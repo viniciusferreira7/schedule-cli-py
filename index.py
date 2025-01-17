@@ -26,10 +26,12 @@ while True:
     print("3. See all contacts")               
     print("4. Update contact")                 
     print("5. Favorite contact")               
-    print("6. See all favorite contacts")         
-    print("7. See all non-favorite contacts")        
-    print("8. Delete contact")                 
-    print("9. Exit")
+    print("6. Mark as favorite contact")               
+    print("7. Unmark as favorite contact")               
+    print("8. See all favorite contacts")         
+    print("9. See all non-favorite contacts")        
+    print("10. Delete contact")                 
+    print("11. Exit")
 
 
     choice = 0
@@ -46,7 +48,7 @@ while True:
     if user_choice == 1:
         add_contact(contacts)
 
-    if user_choice == 9:
+    if user_choice == 11:
         print("\n-----------My contacts------------")
         for idx, contact in enumerate(contacts):
             print(f"{"⭐" if contact["is_favorite"] else " "} \n{idx + 1}. name: {contact["name"]}, phone: {contact["phone"]}, email: {contact["email"]}, created at: {contact["created_at"]}, updated at: {contact["updated_at"]}")
