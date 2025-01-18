@@ -1,6 +1,48 @@
 from add_contact import add_contact
+from see_contact import see_contact
 
-contacts = []
+contacts = [
+    {
+        "name": "Alice",
+        "phone": "(11) 91234-5678",
+        "email": "alice@example.com",
+        "is_favorite": False,
+        "created_at": "2025-01-18 16:05:42",
+        "updated_at": "2025-01-18 16:05:42"
+    },
+    {
+        "name": "Bob",
+        "phone": "(21) 98765-4321",
+        "email": "bob@example.com",
+        "is_favorite": False,
+        "created_at": "2025-01-18 16:05:42",
+        "updated_at": "2025-01-18 16:05:42"
+    },
+    {
+        "name": "Charlie",
+        "phone": "(31) 93456-7890",
+        "email": "charlie@example.com",
+        "is_favorite": False,
+        "created_at": "2025-01-18 16:05:42",
+        "updated_at": "2025-01-18 16:05:42"
+    },
+    {
+        "name": "Diana",
+        "phone": "(41) 94567-1234",
+        "email": "diana@example.com",
+        "is_favorite": False,
+        "created_at": "2025-01-18 16:05:42",
+        "updated_at": "2025-01-18 16:05:42"
+    },
+    {
+        "name": "Eve",
+        "phone": "(51) 93210-5432",
+        "email": "eve@example.com",
+        "is_favorite": False,
+        "created_at": "2025-01-18 16:05:42",
+        "updated_at": "2025-01-18 16:05:42"
+    }
+]
 
 name = None
 loops = 0
@@ -22,7 +64,7 @@ while True:
     
     print("\nManager menu phone book:")
     print("\n1. Add contact")                   # ✔️
-    print("2. See contact")                    
+    print("2. See contact")                     # ✔️
     print("3. See all contacts")               
     print("4. Update contact")                 
     print("5. Favorite contact")               
@@ -47,6 +89,9 @@ while True:
 
     if user_choice == 1:
         add_contact(contacts)
+
+    if user_choice == 2:
+        see_contact(contacts)
 
     if user_choice == 11:
         print("\n-----------My contacts------------")
