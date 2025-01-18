@@ -1,5 +1,6 @@
 from add_contact import add_contact
 from see_contact import see_contact
+from see_all_contacts import see_all_contacts
 
 contacts = [
     {
@@ -65,7 +66,7 @@ while True:
     print("\nManager menu phone book:")
     print("\n1. Add contact")                   # ✔️
     print("2. See contact")                     # ✔️
-    print("3. See all contacts")               
+    print("3. See all contacts")                # ✔️
     print("4. Update contact")                 
     print("5. Favorite contact")               
     print("6. Mark as favorite contact")               
@@ -93,11 +94,11 @@ while True:
     if user_choice == 2:
         see_contact(contacts)
 
+    if user_choice == 3:
+        see_all_contacts(contacts)
+
     if user_choice == 11:
-        print("\n-----------My contacts------------")
-        for idx, contact in enumerate(contacts):
-            print(f"{"⭐" if contact["is_favorite"] else " "} \n{idx + 1}. name: {contact["name"]}, phone: {contact["phone"]}, email: {contact["email"]}, created at: {contact["created_at"]}, updated at: {contact["updated_at"]}")
-        print("\n-------------------------------")
+        see_all_contacts(contacts)
         break
 
                        
