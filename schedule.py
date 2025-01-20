@@ -2,6 +2,7 @@ from add_contact import add_contact
 from see_contact import see_contact
 from see_all_contacts import see_all_contacts
 from update_contact import update_contact
+from delete_contact import delete_contact
 
 contacts = [
     {
@@ -105,6 +106,9 @@ while True:
 
     if user_choice == 6:
         update_contact(contacts, ["is_favorite"])
+
+    if user_choice == 9:
+        delete_contact(contacts)
 
     if user_choice == 10:
         see_all_contacts(contacts)
