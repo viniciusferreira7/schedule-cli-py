@@ -1,6 +1,7 @@
 from add_contact import add_contact
 from see_contact import see_contact
 from see_all_contacts import see_all_contacts
+from update_contact import update_contact
 
 contacts = [
     {
@@ -67,7 +68,7 @@ while True:
     print("\n1. Add contact")                   # ✔️
     print("2. See contact")                     # ✔️
     print("3. See all contacts")                # ✔️
-    print("4. Update contact")                 
+    print("4. Update contact")                  # ✔️
     print("5. Favorite contact")               
     print("6. Mark as favorite contact")               
     print("7. Unmark as favorite contact")               
@@ -96,6 +97,9 @@ while True:
 
     if user_choice == 3:
         see_all_contacts(contacts)
+
+    if user_choice == 4:
+        update_contact(contacts)
 
     if user_choice == 11:
         see_all_contacts(contacts)
