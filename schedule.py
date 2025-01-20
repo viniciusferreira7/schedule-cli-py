@@ -4,48 +4,7 @@ from see_all_contacts import see_all_contacts
 from update_contact import update_contact
 from delete_contact import delete_contact
 
-contacts = [
-    {
-        "name": "Alice",
-        "phone": "(11) 91234-5678",
-        "email": "alice@example.com",
-        "is_favorite": False,
-        "created_at": "2025-01-18 16:05:42",
-        "updated_at": "2025-01-18 16:05:42"
-    },
-    {
-        "name": "Bob",
-        "phone": "(21) 98765-4321",
-        "email": "bob@example.com",
-        "is_favorite": True,
-        "created_at": "2025-01-18 16:05:42",
-        "updated_at": "2025-01-18 16:05:42"
-    },
-    {
-        "name": "Charlie",
-        "phone": "(31) 93456-7890",
-        "email": "charlie@example.com",
-        "is_favorite": False,
-        "created_at": "2025-01-18 16:05:42",
-        "updated_at": "2025-01-18 16:05:42"
-    },
-    {
-        "name": "Diana",
-        "phone": "(41) 94567-1234",
-        "email": "diana@example.com",
-        "is_favorite": True,
-        "created_at": "2025-01-18 16:05:42",
-        "updated_at": "2025-01-18 16:05:42"
-    },
-    {
-        "name": "Eve",
-        "phone": "(51) 93210-5432",
-        "email": "eve@example.com",
-        "is_favorite": False,
-        "created_at": "2025-01-18 16:05:42",
-        "updated_at": "2025-01-18 16:05:42"
-    }
-]
+contacts = []
 
 name = None
 loops = 0
