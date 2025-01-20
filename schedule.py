@@ -16,7 +16,7 @@ contacts = [
         "name": "Bob",
         "phone": "(21) 98765-4321",
         "email": "bob@example.com",
-        "is_favorite": False,
+        "is_favorite": True,
         "created_at": "2025-01-18 16:05:42",
         "updated_at": "2025-01-18 16:05:42"
     },
@@ -69,13 +69,12 @@ while True:
     print("2. See contact")                     # ✔️
     print("3. See all contacts")                # ✔️
     print("4. Update contact")                  # ✔️
-    print("5. Favorite contact")               
-    print("6. Mark as favorite contact")               
-    print("7. Unmark as favorite contact")               
-    print("8. See all favorite contacts")         
-    print("9. See all non-favorite contacts")        
-    print("10. Delete contact")                 
-    print("11. Exit")
+    print("5. Mark as favorite contact")        # ✔️        
+    print("6. Unmark as favorite contact")      # ✔️         
+    print("7. See all favorite contacts")         
+    print("8. See all non-favorite contacts")        
+    print("9. Delete contact")                 
+    print("10. Exit")
 
 
     choice = 0
@@ -99,9 +98,15 @@ while True:
         see_all_contacts(contacts)
 
     if user_choice == 4:
-        update_contact(contacts)
+        update_contact(contacts, ["name", "phone", "email", "is_favorite"])
 
-    if user_choice == 11:
+    if user_choice == 5:
+        update_contact(contacts, ["is_favorite"])
+
+    if user_choice == 6:
+        update_contact(contacts, ["is_favorite"])
+
+    if user_choice == 10:
         see_all_contacts(contacts)
         break
 
