@@ -28,7 +28,7 @@ def update_contact(contacts: List[Dict[str, str]]):
     contact = find_contact(idx_or_name, contacts)
     index = contacts.index(contact)
 
-    print(f"{"⭐" if contact['is_favorite'] else ' '} \n{index + 1}. name: {contact['name']}, phone: {contact['phone']}, email: {contact['email']}, created at: {contact['created_at']}, updated at: {contact['updated_at']}")
+    print(f"{"⭐" if contact['is_favorite'] else ' '} {index + 1}. name: {contact['name']}, phone: {contact['phone']}, email: {contact['email']}, created at: {contact['created_at']}, updated at: {contact['updated_at']}")
 
     
     if make_a_question("\nYou want to update name") == 'y':
@@ -54,8 +54,27 @@ def update_contact(contacts: List[Dict[str, str]]):
         updated_email = input("Enter with new email: ")
         validate_email(updated_email)  
         update_field(contact, "email", updated_email, index, contacts)
+
+    if make_a_question("\nYou want to mark favorite contact") == 'y' and contact["is_favorite"] == False:
+        update_field(contact, "is_favorite", True, index, contacts)
+
+        print("\nUpdated contact details:")
+        updated_contact = contacts[index]
+        print(f"{'⭐' if updated_contact['is_favorite'] else ' '} {index}. name: {updated_contact['name']}, phone: {updated_contact['phone']}, email: {updated_contact['email']}, created at: {updated_contact['created_at']}, updated at: {updated_contact['updated_at']}")
+
+        return 
+
+    if make_a_question("\nYou want to unmark favorite contact") == 'y' and contact["is_favorite"] == True:
+        update_field(contact, "is_favorite", False, index, contacts)
+
+        print("\nUpdated contact details:")
+        updated_contact = contacts[index]
+        print(f"{'⭐' if updated_contact['is_favorite'] else ' '} {index}. name: {updated_contact['name']}, phone: {updated_contact['phone']}, email: {updated_contact['email']}, created at: {updated_contact['created_at']}, updated at: {updated_contact['updated_at']}")
+
+        return 
+    
     
     print("\nUpdated contact details:")
     updated_contact = contacts[index]
-    print(f"{'⭐' if updated_contact['is_favorite'] else ' '} \n{index}. name: {updated_contact['name']}, phone: {updated_contact['phone']}, email: {updated_contact['email']}, created at: {updated_contact['created_at']}, updated at: {updated_contact['updated_at']}")
+    print(f"{'⭐' if updated_contact['is_favorite'] else ' '} {index}. name: {updated_contact['name']}, phone: {updated_contact['phone']}, email: {updated_contact['email']}, created at: {updated_contact['created_at']}, updated at: {updated_contact['updated_at']}")
 

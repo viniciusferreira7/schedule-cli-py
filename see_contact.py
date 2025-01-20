@@ -11,7 +11,7 @@ def see_contact(contacts: List[Dict[str, str]]):
 
     index = contacts.index(contact)
 
-    print(f"{"⭐" if contact["is_favorite"] else " "} \n{index + 1}. name: {contact["name"]}, phone: {contact["phone"]}, email: {contact["email"]}, created at: {contact["created_at"]}, updated at: {contact["updated_at"]}")
+    print(f"{"⭐" if contact["is_favorite"] else " "} {index + 1}. name: {contact["name"]}, phone: {contact["phone"]}, email: {contact["email"]}, created at: {contact["created_at"]}, updated at: {contact["updated_at"]}")
 
     
 
